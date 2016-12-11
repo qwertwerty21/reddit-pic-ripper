@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	div.container
+		nav.navbar-default.navbar-fixed-top.main-nav
+			div.row
+				div.col-md-6.co-sm-12.col-xs-12
+					div.navbar-header.navbar-left
+						img.nav-reddit-logo(src="/images/redditAlien.png", alt="Reddit Logo")
+						h1.nav-header-text reddit pic ripper
+				div.col-md-6.col-sm-12.col-xs-12
+					div.navbar-right
+						input#searchTermInput.search-term-input(type="text", placeholder="Search /r/ ....", autofocus)
+						span.search-term-btn-span
+							button#searchTermBtn.search-term-btn.fa.fa-search
+						//button#ripImgsBtn.btn.btn-primary Rip!
+		div.row
+			div.ripped-img-container
+	script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+	script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js")
+	script(src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js")
+	//script(src='/javascripts/vendor/jszip.min.js')
+	//script(src='/javascripts/vendor/FileSaver.min.js')
+	script(src="/socket.io/socket.io.js")
+	script(src="/javascripts/main.js")
